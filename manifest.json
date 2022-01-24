@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+
+  "name": "TP Killer",
+  "description": "Kill TP Modal overlays",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "TP Killer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+   "activeTab"
+   ]
+}
